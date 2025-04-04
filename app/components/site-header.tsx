@@ -1,5 +1,3 @@
-"use client"
-
 import { memo } from "react"
 import { Instagram, Zap } from "lucide-react"
 import { siteContent } from "../data/site-content"
@@ -11,8 +9,14 @@ const SiteHeader = memo(() => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2" aria-label="Click Automations Home">
-          <div className="size-8 rounded-full gradient-purple flex items-center justify-center">
-            <Zap size={18} className="text-white" />
+          <div className="size-12 rounded-full overflow-hidden">
+            <img 
+              src="/images/logo.png" 
+              alt="Click Automations Logo" 
+              width={56} 
+              height={56} 
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="text-2xl font-bold">{header.logo}</div>
         </a>

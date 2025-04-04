@@ -13,14 +13,19 @@ const SiteFooter = memo(() => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="flex items-center gap-2">
-              <div className="size-8 rounded-full gradient-purple flex items-center justify-center">
-                <Zap size={18} className="text-white" />
+               <div className="size-12 rounded-full overflow-hidden">
+                <img 
+                  src="/images/logo.png" 
+                  alt="Click Automations Logo" 
+                  width={56} 
+                  height={56} 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="text-xl font-bold">{header.logo}</div>
             </div>
             <p className="text-sm text-gray-400">{copyrightText}</p>
           </div>
-
           <div className="flex flex-col md:flex-row gap-4 md:gap-8">
             {header.navItems.map((item) => {
               const Icon = item.icon
